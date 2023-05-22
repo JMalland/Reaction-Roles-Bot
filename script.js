@@ -144,8 +144,8 @@ client.on("messageCreate", async (message) => {
 		if (content.includes("!Roles")) {
 			console.log(content)
 			var channel = client.channels.cache.find(channel => channel.name === "roles")
-            var quotes = grabQuotes(content)
-            if (quotes[1] == "create") { // User is attempting to create a role
+            		var quotes = grabQuotes(content)
+            		if (quotes[1] == "create") { // User is attempting to create a role
 				console.log("Starting Role Configuration")
 
 				updateMenus(message.guild, RoleBuilderData[0]) // Reinitialize the Category & Role Menus
@@ -154,7 +154,7 @@ client.on("messageCreate", async (message) => {
 					console.log("Responded.")
 				})
 			}
-        }
+        	}
 	}
 	catch (e) {
 		console.log(e)
